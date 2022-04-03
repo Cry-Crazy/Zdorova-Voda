@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Zdorova Voda</title>
+</head>
+<body>
+    <section class="main_page">
+        <div class="header">
+            <div class="header__nav">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar__wrap">
+                            <div class="hamb">
+                                <div class="hamb__field" id="hamb">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </div>
+                            </div>
+                            <a href="#" class="logo" id="logo">Zdorova Voda</a>
+                            <ul class="menu" id="menu">
+                                <li> <a href="#"> перший пункт</a></li>
+                                <li><a href="#"> щк якась інфа</a></li>
+                                <li><a href="#"> важлива інфа</a></li>
+                                <li><a href="#"> про нас</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="popup" id="popup">
+
+                </div>
+            </div>
+            <div class="popup__btn">
+                <span class="popup__span">Замовити</span>
+            </div>
+            <div class="popup__container">
+                <div class="popup__close">
+                    <div class="close_line close_line1"></div>
+                    <div class="close_line close_line2"></div>
+                </div>
+                <form action="./mail.php" method="post" class="form__popup" id="form">
+
+                    <div class="form__blank">
+                        <input type="text" class='_req' name="user_name" id="user_name" placeholder="ім'я:">
+                        <input type="tel" class='_req' name="user_phone" id="phoneNumber" placeholder="телефон:" pattern=".{10,}" required>
+                        <input type="text" class='_req' name="adres" id="adress" placeholder="адреса:">
+                        <textarea name="note" id="note" style="resize: none;" placeholder="примітка:"></textarea>
+                        <label for="number" style="text-align: center;">кількість:</label>
+                        <input type="number" class='_req' name="number" id="number" list="" step="1" value="0" >
+                    </div>
+                    <div class="form__send">
+                        <input type="submit" value="відправити" class="btn__send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./javascript.js"></script>
+</body>
+</html>

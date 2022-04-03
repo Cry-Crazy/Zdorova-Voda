@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./font/Montserrat-Light.ttf");
+}
+
+html {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  color: white;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main_page {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.main_page .header {
+  position: relative;
+  width: 100%;
+  max-width: 564px;
+  margin: 0 auto;
+  height: 100%;
+  background-image: url("./img/Rectangle 7.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 564px;
+  margin: 0 auto;
+  height: 75px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000c2), to(transparent));
+  background: linear-gradient(180deg, #000000c2, transparent);
+}
+
+.navbar__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  padding: 0px 10px;
+}
+
+.hamb {
+  display: none;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+.navbar__wrap .menu {
+  display: none;
+}
+
+.hamb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hamb__field {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: 5px auto;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.popup {
+  position: fixed;
+  top: 75px;
+  right: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: #99C83A;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-top-left-radius: 25px;
+}
+
+.popup.open {
+  right: 0;
+}
+
+.popup .menu {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+}
+
+.popup .menu li {
+  width: 100%;
+}
+
+.popup .menu li a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+
+.hamb__field.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamb__field.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg) translateX(1px);
+          transform: translateY(8px) rotate(45deg) translateX(1px);
+}
+
+.hamb__field.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-6px) rotate(-45deg) translateX(1px);
+          transform: translateY(-6px) rotate(-45deg) translateX(1px);
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+.popup__btn {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: #99C83A 2px solid;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.297);
+}
+
+.popup__span {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 15px 30px;
+  color: #99C83A;
+}
+
+.popup__container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 12;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.popup__container .popup__close {
+  position: absolute;
+  z-index: 100;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+}
+
+.popup__container .popup__close .close_line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+
+.popup__container .popup__close .close_line1 {
+  -webkit-transform: rotate(45deg) translateY(2px) translateX(0px);
+          transform: rotate(45deg) translateY(2px) translateX(0px);
+}
+
+.popup__container .popup__close .close_line2 {
+  -webkit-transform: rotate(-45deg) translateY(-3px) translateX(-1px);
+          transform: rotate(-45deg) translateY(-3px) translateX(-1px);
+}
+
+.popup__container.active {
+  position: absolute;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.644);
+}
+
+.form__popup {
+  width: 80%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 10%;
+}
+
+.form__popup .form__blank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #00B4E9;
+  border-radius: 30px;
+  padding: 20px 0;
+}
+
+.form__popup .form__blank input,
+.form__popup .form__blank textarea {
+  border-radius: 25px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  outline: none;
+  width: 80%;
+  margin: 5px auto;
+  padding: 15px 5px;
+}
+
+.form__popup .form__blank input[type="number"] {
+  text-align: center;
+}
+
+.form__popup .form__blank ::-webkit-input-placeholder {
+  color: white;
+  padding: 5px;
+}
+
+.form__popup .form__send .btn__send {
+  display: block;
+  margin: 10px auto;
+  background: #99C83A;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 15px 30px;
+}
+/*# sourceMappingURL=style.css.map */
